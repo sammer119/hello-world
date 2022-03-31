@@ -33,7 +33,7 @@
           </v-tooltip>
         </v-card-text>
 
-        <v-card-text class="white--text px-16">
+        <v-card-text class="px-16">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, incididunt ut labore et dolore. Lorem ipsum dolor sit
@@ -43,7 +43,7 @@
 
         <v-divider></v-divider>
 
-        <v-card-text class="white--text">
+        <v-card-text>
           {{ new Date().getFullYear() }} — <strong>{{ title }}</strong>
         </v-card-text>
       </v-card>

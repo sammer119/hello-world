@@ -1,12 +1,12 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center pl-16">
+    <v-app-bar app color="primary">
+      <div class="d-flex align-center">
         <h1
           alt="Vuetify Name"
-          class="shrink mt-1"
+          class="shrink mt-1 px-16"
           contain
-          min-width="100"
+          max-width="100"
           width="100"
         >
           <!-- This is what I usually do in React if I want to conditionally render something. Have seen the v-if v-else though -->
