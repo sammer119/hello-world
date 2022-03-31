@@ -1,69 +1,85 @@
-
-Search Vuetify
-#Footers
-The v-footer component is used for displaying general information that a user might want to access from any page within your site.
-
-#Usage
-The v-footer component in its simplest form is a container.
-
-2022 — Vuetify
-Variant
-default
-#API
-v-footer
-#Examples
-#Props
-#Padless Footer
-The padless prop removes all default padding from the footer component.
-
-2022 — Vuetify
-#Misc
-#Company Footer
-The footer component as a basic company footer with links.
-
-2022 — Vuetify
-#Indigo Footer
-The footer component with Indigo background color and social media icons and button.
-
 <template>
-  <v-footer dark padless>
-    <v-card flat tile class="indigo lighten-1 white--text text-center">
-      <v-card-text>
-        <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
-          <v-icon size="24px">
-            {{ icon }}
-          </v-icon>
-        </v-btn>
-      </v-card-text>
+  <v-card>
+    <v-footer fixed padless>
+      <v-card flat tile class="primary lighten-1 white--text text-center">
+        <v-card-text class="mb-0 pb-0">
+          <v-tooltip v-if="!$vuetify.theme.dark" bottom>
+            <template v-slot:activator="{ on }">
+              <v-btn
+                v-on="on"
+                color="primary"
+                small
+                fab
+                @click="toggleDarkMode"
+              >
+                <v-icon class="mr-1">mdi-moon-waxing-crescent</v-icon>
+              </v-btn>
+            </template>
+            <span>Dark Mode On</span>
+          </v-tooltip>
+          <v-tooltip v-else bottom>
+            <template v-slot:activator="{ on }">
+              <v-btn
+                v-on="on"
+                color="primary"
+                small
+                fab
+                @click="toggleDarkMode"
+              >
+                <v-icon color="yellow">mdi-white-balance-sunny</v-icon>
+              </v-btn>
+            </template>
+            <span>Dark Mode Off</span>
+          </v-tooltip>
+        </v-card-text>
 
-      <v-card-text class="white--text pt-0">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </v-card-text>
+        <v-card-text class="white--text px-16">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, incididunt ut labore et dolore. Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit.
+        </v-card-text>
 
-      <v-divider></v-divider>
+        <v-divider></v-divider>
 
-      <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
-      </v-card-text>
-    </v-card>
-  </v-footer>
+        <v-card-text class="white--text">
+          {{ new Date().getFullYear() }} — <strong>{{ title }}</strong>
+        </v-card-text>
+      </v-card>
+    </v-footer>
+  </v-card>
 </template>
 <script>
 export default {
   name: "HelloWorld",
+  props: ["title"],
+
   data: () => ({
-    name: 0,
-    icons: ["mid-facebook"],
+    items: ["default", "absolute", "fixed"],
+    padless: false,
+    variant: "default",
   }),
+
   methods: {
     greet() {
       alert(`Hello Sam!`);
+    },
+    toggleDarkMode() {
+      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+    },
+  },
+  computed: {
+    localAttrs() {
+      const attrs = {};
+
+      if (this.variant === "default") {
+        attrs.absolute = false;
+        attrs.fixed = false;
+      } else {
+        attrs[this.variant] = true;
+      }
+      return attrs;
     },
   },
 };

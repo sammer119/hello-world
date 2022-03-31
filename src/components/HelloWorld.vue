@@ -1,33 +1,38 @@
 <template>
-  <v-container class="pa-6">
-    <v-layout class="pa-6">
+  <v-container>
+    <v-layout class="py-6">
       <v-row>
-        <v-col class="px-5" cols="12" sm="12" md="6">
-          <v-text-field label="Field 1" outlined></v-text-field>
+        <!-- Vuetify seems similar to bootstrap in the way the screen is split up into 12 sections. For small screens will be 1 col, for medium and larger will be 3 cols (ie. 4/12 = 3) -->
+        <v-col class="px-5" cols="12" sm="12" md="4">
+          <v-text-field label="Name" outlined></v-text-field>
         </v-col>
-        <v-col class="px-5" cols="12" sm="12" md="6">
-          <v-text-field label="Field 2" outlined></v-text-field>
+        <v-col class="px-5" cols="12" sm="12" md="4">
+          <v-text-field label="Age" outlined></v-text-field>
         </v-col>
-        <v-col class="px-5" cols="12" sm="12" md="6">
-          <v-text-field label="Field 3" outlined></v-text-field>
+        <v-col class="px-5" cols="12" sm="12" md="4">
+          <v-text-field label="Birthplace" outlined></v-text-field>
         </v-col>
-        <v-col class="px-5" cols="12" sm="12" md="6">
-          <v-text-field label="Field 4" outlined></v-text-field>
+        <v-col class="px-5" cols="12" sm="12" md="4">
+          <v-text-field label="Gender" outlined></v-text-field>
         </v-col>
-        <v-col class="px-5" cols="12" sm="12" md="6">
-          <v-text-field label="Field 5" outlined></v-text-field>
+        <v-col class="px-5" cols="12" sm="12" md="4">
+          <v-text-field label="Nationality" outlined></v-text-field>
         </v-col>
-        <v-col class="px-5" cols="12" sm="12" md="6">
-          <v-text-field label="Field 6" outlined></v-text-field>
+        <v-col class="px-5" cols="12" sm="12" md="4">
+          <v-text-field label="Religion" outlined></v-text-field>
         </v-col>
-        <v-col class="px-5" cols="12" sm="12" md="6">
-          <v-text-field label="Field 7" outlined></v-text-field>
+        <v-col class="px-5" cols="12" sm="12" md="4">
+          <v-text-field label="Height" outlined></v-text-field>
         </v-col>
-        <v-col class="px-5" cols="12" sm="12" md="6">
-          <v-text-field label="Field 8" outlined></v-text-field>
+        <v-col class="px-5" cols="12" sm="12" md="4">
+          <v-text-field label="Weight" outlined></v-text-field>
         </v-col>
-        <v-col class="px-5" cols="12" sm="12" md="6">
-          <v-text-field label="Field 9" outlined></v-text-field>
+        <v-col class="px-5" cols="12" sm="12" md="4">
+          <v-text-field label="Memorable Information" outlined></v-text-field>
+        </v-col>
+        <!-- space class - tried to put a 10% height on the footer but wasn't working so just added this spacer so no fields were cut off in mobile view. -->
+        <v-col class="py-16 my-16" cols="12">
+          <div></div>
         </v-col>
       </v-row>
     </v-layout>
@@ -44,14 +49,6 @@ export default {
         text: "vuetify-loader",
         href: "https://github.com/vuetifyjs/vuetify-loader",
       },
-      {
-        text: "github",
-        href: "https://github.com/vuetifyjs/vuetify",
-      },
-      {
-        text: "awesome-vuetify",
-        href: "https://github.com/vuetifyjs/awesome-vuetify",
-      },
     ],
     importantLinks: [
       {
@@ -62,31 +59,11 @@ export default {
         text: "Chat",
         href: "https://community.vuetifyjs.com",
       },
-      {
-        text: "Made with Vuetify",
-        href: "https://madewithvuejs.com/vuetify",
-      },
-      {
-        text: "Twitter",
-        href: "https://twitter.com/vuetifyjs",
-      },
-      {
-        text: "Articles",
-        href: "https://medium.com/vuetify",
-      },
     ],
     whatsNext: [
       {
         text: "Explore components",
         href: "https://vuetifyjs.com/components/api-explorer",
-      },
-      {
-        text: "Select a layout",
-        href: "https://vuetifyjs.com/getting-started/pre-made-layouts",
-      },
-      {
-        text: "Frequently Asked Questions",
-        href: "https://vuetifyjs.com/getting-started/frequently-asked-questions",
       },
     ],
   }),
