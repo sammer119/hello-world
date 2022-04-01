@@ -2,20 +2,11 @@
   <v-card>
     <!-- to make the footer fixed at the bottom of the page with no padding -->
     <v-footer fixed padless>
-      <!-- have as primary colour -->
+      <!-- have as primary colour, flex, then flex-column so children form a column -->
       <v-card
         flat
         tile
-        class="primary lighten-1 text-center"
-        :height="
-          $vuetify.breakpoint.xs
-            ? '33vh'
-            : $vuetify.breakpoint.sm
-            ? '28vh'
-            : $vuetify.breakpoint.md
-            ? '24vh'
-            : '22vh'
-        "
+        class="primary lighten-1 text-center d-flex flex-column"
       >
         <v-card-text class="mb-0 pb-0">
           <!-- if vuetify theme is light then display this -->
