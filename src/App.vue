@@ -2,9 +2,13 @@
   <v-app>
     <v-app-bar app color="primary">
       <div class="d-flex align-center">
+        <!-- conditionally have padding on the h1, this seems a bit verbose but haven't found a different way to do it yet -->
         <h1
           alt="Vuetify Name"
-          class="shrink mt-1 px-16"
+          :class="{
+            'pl-0': $vuetify.breakpoint.smAndDown,
+            'px-16': $vuetify.breakpoint.mdAndUp,
+          }"
           contain
           max-width="100"
           width="100"
@@ -42,12 +46,7 @@ export default {
   data: () => ({
     appTitle: "helloWorld",
   }),
-  methods: {
-    // toggle function to change the theme to the opposite of what it currently is ie. dark or light
-    toggleDarkMode() {
-      this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-    },
-  },
+  methods: {},
 };
 </script>
 <style>

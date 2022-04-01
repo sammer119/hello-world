@@ -30,6 +30,7 @@
         <v-col class="px-5" cols="12" sm="12" md="4">
           <v-text-field label="Memorable Information" outlined></v-text-field>
         </v-col>
+
         <!-- space class - tried to put a 10% height on the footer but wasn't working so just added this spacer so no fields were cut off in mobile view. -->
         <v-col class="py-16 my-16" cols="12">
           <div></div>

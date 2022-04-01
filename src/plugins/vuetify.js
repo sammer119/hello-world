@@ -5,21 +5,21 @@ Vue.use(Vuetify);
 
 export default new Vuetify({
     theme: {
+        // light and dark theme
         themes: {
             light: {
                 primary: '#03DAC6',
                 secondary: '#b0bec5',
-                accent: '#8c9eff',
+                accent: '#002642',
                 error: '#b71c1c',
-                background: '#f57421'
             },
             dark: {
                 primary: '#8B008B',
-                secondary: '#f57421',
-                accent: '#f57421',
-                error: '#f57421',
-                background: '#f57421'
-            }
+                secondary: '#E5DADA',
+                accent: '#000000',
+                error: '#840032',
+                yellow: '#F1C01A'
+            },  
         }
     }
 });
