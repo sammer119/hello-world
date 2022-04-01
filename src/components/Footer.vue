@@ -30,21 +30,19 @@
             <span>Dark Mode Off</span>
           </v-tooltip>
         </v-card-text>
-        <!-- breakpoints for padding -->
-        <v-card-text
-          :class="
-            $vuetify.breakpoint.xs
-              ? 'px-4'
-              : $vuetify.breakpoint.sm
-              ? 'px-6'
-              : 'px-16'
-          "
+        <!-- breakpoints for padding, not a fan of this solution but if I removed the text on here for smaller screens the background sizing would go funny. -->
+        <v-card-text 
+        :class="$vuetify.breakpoint.xs 
+                ? 'px-1' 
+                : ($vuetify.breakpoint.sm
+                    ? 'px-4' 
+                    : ($vuetify.breakpoint.md
+                        ? 'px-8'
+                        : 'px-16'
+                    )
+                )"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, incididunt ut labore et dolore. Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
+        Lorem ipsum dolor sit amet. Et tempore voluptatem aut unde magnam quo voluptates maiores aut architecto veniam non doloremque iure et animi consectetur rem voluptatem saepe. Id quas iure ut exercitationem autem vel officiis illum non repudiandae neque.
         </v-card-text>
 
         <v-divider></v-divider>
