@@ -30,7 +30,7 @@
             <span>Dark Mode Off</span>
           </v-tooltip>
         </v-card-text>
-        <!-- breakpoints for padding, not a fan of this solution but if I removed the text on here for smaller screens the background sizing would go funny. -->
+        <!-- breakpoints for padding, not a fan of this solution but if I removed the text on here for smaller screens the background sizing would go funny and not entirely sure why - maybe do with the parent? -->
         <v-card-text 
         :class="$vuetify.breakpoint.xs 
                 ? 'px-1' 
