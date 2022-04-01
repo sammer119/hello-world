@@ -30,8 +30,16 @@
             <span>Dark Mode Off</span>
           </v-tooltip>
         </v-card-text>
-
-        <v-card-text class="px-16">
+        <!-- breakpoints for padding -->
+        <v-card-text
+          :class="
+            $vuetify.breakpoint.xs
+              ? 'px-4'
+              : $vuetify.breakpoint.sm
+              ? 'px-6'
+              : 'px-16'
+          "
+        >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, incididunt ut labore et dolore. Lorem ipsum dolor sit
